@@ -20,29 +20,29 @@
         <script src="js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
         <script src="js/instafeed.min.js" type="text/javascript"></script>
         <script src="js/custom.js" type="text/javascript"></script>
-        <script>
-            // var student = {
-            //     email:'123456',
-            //     phone:'121421421',
-            // };
+        <!--<script>-->
+            <!--// var student = {-->
+            <!--//     email:'123456',-->
+            <!--//     phone:'121421421',-->
+            <!--// };-->
 
-            // var senddata = JSON.stringify(student);
+            <!--// var senddata = JSON.stringify(student);-->
 
-            console.log(senddata)
+            <!--console.log(senddata)-->
 
-            setInterval(function query() {
-                $.ajax({
-                    url: "http://127.0.0.1:5000/predict",
-                    type: "POST",
-                    data: new FormData($('original_image')[0]),
-                    processData:false,
-                    contentType:false,
-                    // dataType: "json",
-                    success: function (data) {
-                        console.log(data)
-                    }
-                })
-            }, 1000);1000
+            <!--setInterval(function query() {-->
+                <!--$.ajax({-->
+                    <!--url: "http://127.0.0.1:5000/completeface",-->
+                    <!--type: "POST",-->
+                    <!--data: new FormData($('original_image1')[0]),-->
+                    <!--processData:false,-->
+                    <!--contentType:false,-->
+                    <!--// dataType: "json",-->
+                    <!--success: function (data) {-->
+                        <!--console.log(data)-->
+                    <!--}-->
+                <!--})-->
+            <!--}, 1000);1000-->
 
 
         </script>

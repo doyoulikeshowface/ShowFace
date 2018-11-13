@@ -31,11 +31,11 @@ def fromsketch():
     return send_file(byte_io, mimetype="image/jpeg")
 @app.route("/completeface", methods=["POST"])
 def completeface():
-    test_path = os.path.join(os.path.dirname(__file__), evaluate.args.test_dir)
-    out_path = os.path.join(os.path.dirname(__file__), evaluate.args.outf)
+    test_path = os.path.join(os.path.dirname(__file__), 'completeface/'+evaluate.args.test_dir)
+    out_path = os.path.join(os.path.dirname(__file__), 'completeface/'+evaluate.args.outf)
     test_list_path = os.path.join(os.path.dirname(__file__),'completeface/list_test.txt')
-    with open(test_list_path,"wb") as f:
-        f.write("test_data/test.jpg")
+    with open(test_list_path,"w") as f:
+        f.write(os.path.join(os.path.join(os.path.dirname(__file__), 'completeface'),"test_data/test.jpg"))
     if flask.request.method == "POST":
         image = flask.request.files["image"].read()
         # image = io.BytesIO(image)
