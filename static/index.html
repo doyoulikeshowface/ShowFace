@@ -20,6 +20,13 @@
         <script src="js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
         <script src="js/instafeed.min.js" type="text/javascript"></script>
         <script src="js/custom.js" type="text/javascript"></script>
+        <!--<script>$("iframe[name=iframeContent]").on("load", function() {-->
+<!--　　                                      var responseText = $("iframe")[0].contentDocument.body.getElementsByTagName("pre")[0].innerHTML;-->
+<!--　　                                      alert(responseText);-->
+<!--//                                             var d = window.frames["iframeContent"].document;-->
+<!--　　                                        //以下就可以判断并处理返回值-->
+                                        <!--})</script>-->
+
         <!--<script>-->
             <!--// var student = {-->
             <!--//     email:'123456',-->
@@ -45,7 +52,7 @@
             <!--}, 1000);1000-->
 
 
-        </script>
+        <!--</script>-->
         <script>
         function changepic1(obj) {
         console.log(obj.files[0]);//这里可以获取上传文件的name
@@ -222,10 +229,11 @@
                                 </div>
                                 <h4><!--<a href="http://127.0.0.1:5000/predict" class="a_post">Complete Face</a>-->
 
-                                    <form id="original_image1" method="post" action="http://127.0.0.1:5000/completeface" enctype="multipart/form-data">
+                                    <form id="original_image1" method="post" action="http://127.0.0.1:5000/completeface" enctype="multipart/form-data" target="iframeComplete">
                                         <input type="file" id="image1" size="30" onchange="changepic1(this)" name="image"/>
                                         <input type="submit" value="Complete Face" class="button-new" style="margin-top:15px;"/>
                                     </form>
+                                    <!--<iframe src="" frameborder="0" name="iframeComplete" ></iframe>-->
 
                                 </h4>
                             </div>
@@ -316,8 +324,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="completecss">
+                                <iframe src="" frameborder="1" name="iframeComplete" height="132" width="132" ></iframe>
+                            </div>
                             <div class="gallery-image">
-                                <img class="img-responsive" src="" id="result1">
+
                                 <div class="overlay">
                                     <!--<a class="info pop example-image-link img-responsive" href="images/room1.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>-->
                                     <!--<p><a>delux room</a></p>-->
@@ -326,11 +337,12 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                             <div class="gallery-image">
-                                <img class="img-responsive" src="" id="result2">
-                                <div class="overlay">
-                                    <!--<a class="info pop example-image-link img-responsive" href="images/room2.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>-->
-                                    <!--<p><a>super room</a></p>-->
-                                </div>
+
+                                <!--<img class="img-responsive" src="" id="result2">-->
+                                <!--<div class="overlay">-->
+                                    <!--&lt;!&ndash;<a class="info pop example-image-link img-responsive" href="images/room2.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<p><a>super room</a></p>&ndash;&gt;-->
+                                <!--</div>-->
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">

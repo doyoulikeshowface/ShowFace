@@ -908,3 +908,7 @@ footer a{
 #instafeed > div:nth-last-child(-n+3) {
     margin-top: 15px;
 }
+.completecss{
+    margin-left: 66px;
+    /*padding-left: 200px;*/
+}
