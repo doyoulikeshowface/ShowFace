@@ -21,6 +21,7 @@ def fromsketch():
         image = flask.request.files["image"].read()
         # image = io.BytesIO(image)
         image = Image.open(io.BytesIO(image))
+        image = image.resize((128,128),Image.ANTIALIAS)
         image.save(test_path+'/test.jpg')
         pix2pix.main()
         byte_io = io.BytesIO()
